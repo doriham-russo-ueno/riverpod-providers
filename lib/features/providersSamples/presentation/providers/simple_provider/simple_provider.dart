@@ -14,4 +14,9 @@ final simpleProviderWithFamily =
     Provider.family<String, String>((ref, name) => "Hello $name");
 
 final simpleProviderWithFamilyDispose =
-    Provider.autoDispose.family<String, String>((ref, name) => "Hello $name");
+    Provider.autoDispose.family<String, String>((ref, name) {
+  ref.onDispose(() {
+    print('[simpleProviderWithFamilyDispose($name) disposed]');
+  });
+  return "Hello $name";
+});

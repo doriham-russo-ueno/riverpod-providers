@@ -13,13 +13,35 @@ class ProviderSummaryPage extends ConsumerWidget {
         children: [
           InkWell(
             child: const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 40),
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
               child: _ProviderButtonSampleWidget(
                 title: 'Simple Provider Sample',
               ),
             ),
             onTap: () {
               ref.read(appRouterProvider).push('/provider');
+            },
+          ),
+          InkWell(
+            child: const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+              child: _ProviderButtonSampleWidget(
+                title: 'Simple state provider sample',
+              ),
+            ),
+            onTap: () {
+              ref.read(appRouterProvider).push('/stateprovider');
+            },
+          ),
+          InkWell(
+            child: const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+              child: _ProviderButtonSampleWidget(
+                title: 'Future Provider API fetch sample',
+              ),
+            ),
+            onTap: () {
+              ref.read(appRouterProvider).push('/futureprovider');
             },
           )
         ],
