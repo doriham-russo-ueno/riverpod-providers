@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:riverpod_counter/features/providersSamples/presentation/providers/simple_provider/simple_provider.dart';
 import 'package:riverpod_counter/features/providersSamples/presentation/providers/simple_provider/simple_provider_anotate.dart';
 
 class SimpleProviderSample extends ConsumerWidget {
