@@ -9,6 +9,9 @@ import 'package:riverpod_counter/features/providersSamples/presentation/provider
 
 abstract class PostDatasource {
   Future<PostResponseModel> getPosts();
+  Future<PostModel> getPostDetails({
+    required String id,
+  });
 }
 
 ///provider for datasource
@@ -34,5 +37,13 @@ class PostRemoteDatasource implements PostDatasource {
     }
     print(postList.length);
     return PostResponseModel(postList: postList);
+  }
+
+  @override
+  Future<PostModel> getPostDetails({required String id}) async {
+    final response = await apiClient.getHttp(
+        url: 'https://jsonplaceholder.typicode.com/posts/$id');
+    print('hello there, trying to get post details!');
+    return PostModel.fromJson(response.data);
   }
 }
