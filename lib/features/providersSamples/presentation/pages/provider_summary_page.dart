@@ -43,6 +43,28 @@ class ProviderSummaryPage extends ConsumerWidget {
             onTap: () {
               ref.read(appRouterProvider).push('/futureprovider');
             },
+          ),
+          InkWell(
+            child: const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+              child: _ProviderButtonSampleWidget(
+                title: 'StreamProvider sample',
+              ),
+            ),
+            onTap: () {
+              ref.read(appRouterProvider).push('/streamprovider');
+            },
+          ),
+          InkWell(
+            child: const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+              child: _ProviderButtonSampleWidget(
+                title: 'State Notifier Provider sample',
+              ),
+            ),
+            onTap: () {
+              ref.read(appRouterProvider).push('/statenotifier');
+            },
           )
         ],
       ),
