@@ -1,6 +1,8 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_counter/features/providersSamples/data/models/todo_model.dart';
 
+///remember that state notifier is kinda legacy and it is recommended to use NotifierProvider or AsyncNotifierProvider
+
 class TodosStateNotifier extends StateNotifier<Map<String, TodoModel>> {
   TodosStateNotifier() : super(<String, TodoModel>{});
 

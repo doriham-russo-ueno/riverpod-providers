@@ -65,6 +65,17 @@ class ProviderSummaryPage extends ConsumerWidget {
             onTap: () {
               ref.read(appRouterProvider).push('/statenotifier');
             },
+          ),
+          InkWell(
+            child: const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+              child: _ProviderButtonSampleWidget(
+                title: 'Notifier Provider with enum sample',
+              ),
+            ),
+            onTap: () {
+              ref.read(appRouterProvider).push('/notifierprovider');
+            },
           )
         ],
       ),
