@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_counter/features/providersSamples/data/models/activity_model.dart';
-import 'package:riverpod_counter/features/providersSamples/presentation/providers/activity_provider/activity_provider.dart';
-import 'package:riverpod_counter/features/providersSamples/presentation/providers/activity_provider/enum_acitivity_state.dart';
 import 'package:bulleted_list/bulleted_list.dart';
+import 'package:riverpod_counter/features/providersSamples/presentation/providers/activity_provider/enum_based/activity_provider.dart';
+import 'package:riverpod_counter/features/providersSamples/presentation/providers/activity_provider/enum_based/enum_acitivity_state.dart';
 
 class NotifierProviderSamplePage1 extends ConsumerWidget {
   const NotifierProviderSamplePage1({super.key});
